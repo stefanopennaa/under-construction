@@ -1,13 +1,14 @@
+/* Base */
 html,
 body {
     height: 100%;
 }
 
+/* Global layout */
 body {
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
     background: radial-gradient(circle at center,
             #ffffff 0%,
@@ -21,11 +22,36 @@ body {
     line-height: 1.5;
 }
 
+/* Main content */
 main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     padding: 1rem;
     text-align: center;
 }
 
+/* Footer */
+footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Typography */
 h1 {
     margin: 0;
     font-size: 2.5rem;
@@ -36,14 +62,14 @@ p {
     margin: 1rem 0 0;
 }
 
-/* Responsive font size for smaller screens */
+/* Responsive */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
     }
 }
 
-/* Animated striped underline */
+/* Decorative underline */
 h1::after {
     content: "";
     display: block;
@@ -60,7 +86,7 @@ h1::after {
     animation: stripes-move 60s linear infinite;
 }
 
-/* Keyframes for animated striped underline */
+/* Animation */
 @keyframes stripes-move {
     from {
         background-position: 0 0;
